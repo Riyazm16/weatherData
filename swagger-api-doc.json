@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
+    "title": "My weather API",
     "description": "weather info",
     "version": "1.0.0"
   },
-  "host": "localhost:3000/api",
+  "host": "localhost:6001/api",
   "basePath": "/",
   "tags": [],
   "schemes": [
@@ -14,11 +14,26 @@
   "consumes": [],
   "produces": [],
   "paths": {
-    "/weather/": {
+    "/weather": {
       "get": {
         "tags": [],
         "description": "",
-        "parameters": [],
+        "parameters":[  
+          {  
+             "name":"city",
+             "in":"query",
+             "description":"Name of the city",
+             "required":true,
+             "type":"string"
+          },
+          {  
+             "name":"country",
+             "in":"query",
+             "description":"Name of the country in iso format eg: in,uk",
+             "required":true,
+             "type":"string"
+          }
+        ],
         "responses": {}
       }
     }

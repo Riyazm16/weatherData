@@ -5,7 +5,7 @@ const doc = {
     title: "My weather API",
     description: "weather info",
   },
-  host: "localhost:3000/api",
+  host: "localhost:6001/api",
   schemes: ["http"],
   definitions: {
     api_log: {

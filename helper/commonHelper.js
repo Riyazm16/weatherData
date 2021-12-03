@@ -1,18 +1,23 @@
 /**
  * check number is prime or not
- * @param {number} number - text to encrypt
+ * @param {number} number
  */
-const isPrime = (number = 0) => {
-  if (number === 2) {
-    return true;
+const isPrime = (dayNum = 0) => {
+  if (isNaN(dayNum) || !isFinite(dayNum) || dayNum % 1 || dayNum < 2) {
+    return false;
   }
-  if (number > 0) {
-    for (let i = 2; i < number; i++) {
-      if (number % i === 0) {
-        return false;
-      }
+  if (dayNum % 2 === 0) {
+    if (dayNum == 2) {
+      return true;
     }
-    return true;
+    return false;
   }
+  const sqrt = Math.sqrt(dayNum);
+  for (let i = 3; i <= sqrt; i += 2) {
+    if (dayNum % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 module.exports = { isPrime };

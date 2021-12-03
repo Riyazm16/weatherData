@@ -1,7 +1,9 @@
 const express = require("express");
-const userRouter = express.Router();
+const weatherRouter = express.Router();
 const { getWeather } = require("../controllers/weather");
+const { validateWeather } = require("../validators/weather");
+const trimRequest = require("trim-request");
 
-userRouter.get("/", [getWeather]);
+weatherRouter.get("/", [trimRequest.all,validateWeather, getWeather]);
 
-module.exports = userRouter;
+module.exports = weatherRouter;

@@ -19,6 +19,9 @@ exports.utilityConstants = {
     messages: {
       api_error: "Unable to fetch data",
       not_prime_num: "Date is not prime so no data",
+      country_code_length: "Country code should be maximum 2 characters",
+      invalid_country_code: "Country code is invalid",
+      invalid_city: "Invalid city",
     },
   },
 };
