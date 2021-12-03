@@ -18,7 +18,7 @@ npm start
 
 npm run swagger
 
-# swagger endpoint - please check models section for request body
+# swagger endpoint 
 
 http://localhost:6001/api-docs/#
 
